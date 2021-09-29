@@ -1,0 +1,34 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+@import './variable';
+*,
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+// error message
+.error_msg {
+  color: $colorRed;
+  width: 100%;
+}
+
+// input
+
+
+// Button
+
+
+// Table

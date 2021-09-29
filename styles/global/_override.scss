@@ -1,0 +1,86 @@
+/**
+  Overide css in template
+*/
+
+/* ---------------------------------- Form ---------------------------------- */
+
+.new-control.new-checkbox.checkbox-success > input:checked ~ span.new-control-indicator {
+  background: $colorSuccess;
+  border-radius: unset;
+}
+
+.form-group label,
+label {
+  color: black;
+  letter-spacing: 0;
+}
+
+a {
+  color: $colorPrimaryBlue;
+}
+
+/* ---------------------------- Header and navbar --------------------------- */
+
+.header-container {
+  position: sticky;
+  background-color: white;
+
+  .header {
+    padding: 16px 24px;
+    max-width: 1920px;
+  }
+
+  border-bottom: .5px solid #cccccc;
+  box-shadow: rgba(0, 0, 0, .24) 0 1px 4px;
+}
+
+.navbar a.navbar-brand img {
+  width: auto;
+  height: auto;
+  margin-right: 76px;
+}
+
+.navbar .navbar-item .nav-item form.form-inline input.search-form-control {
+  padding: 0;
+  padding-left: 40px;
+  width: 290px !important;
+  height: 40px !important;
+}
+
+.navbar .navbar-item .nav-item.search-animated svg {
+  top: 10px;
+}
+
+/* -------------------------------- Continer -------------------------------- */
+
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 0;
+  max-width: 1920px;
+  padding: 0;
+}
+
+/* ---------------------------------- Table --------------------------------- */
+
+.table > thead > tr > th {
+  text-transform: unset;
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.table td,
+.table th {
+  border: none;
+}
+
+// Tabs
+.animated-underline-content .nav-tabs .nav-link::before {
+  background-color: $colorPrimaryBlue;
+  height: 4px;
+  bottom: -3px;
+}

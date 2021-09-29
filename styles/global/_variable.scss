@@ -1,0 +1,35 @@
+/* Color */
+$colorPrimaryBlue: #0085ca;
+$colorSecondaryBlue: #bbdefb;
+$colorLightBlue: #e8eff5;
+$colorDarkBlue: #005999;
+$colorRed: #ff0000;
+$colorDeepBlue: #90caf9;
+$colorLightGray: rgba(0, 0, 0, 0.87);
+$colorSuccess: #7eae6e;
+$colorBubbleBg: #fef3de;
+$colorWhite: #ffffff;
+
+/* Font */
+$fontLarge1: 26px;
+$fontLarge2: 22px;
+$fontNormal: 16px;
+
+/* Break point */
+$xxxs: 320px;
+$xxs: 445px;
+$xs: 620px;
+$s: 768px;
+$ms: 840px;
+$m: 1000px;
+$ml: 1160px;
+$l: 1280px;
+$xl: 1440px;
+$xxl: 1800px;
+
+/* Transitions */
+$duration: 0.25s;
+$speed: 0.2s;
+$ease: ease-in-out;
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$transition-default: var($duration) var($ease);
