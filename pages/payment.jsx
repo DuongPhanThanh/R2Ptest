@@ -1,9 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const Payment = () => (
-        <div>
-            Payment page
-        </div>
-);
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['payment'])),
+    }, // will be passed to the page component as props
+  };
+}
+export default function Payment(props) {
+  const { t } = useTranslation();
 
-export default Payment;
+  return (<div>
+          {t('payment:payment_title')}
+        </div>);
+}
