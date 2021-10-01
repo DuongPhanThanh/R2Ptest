@@ -1,5 +1,8 @@
 {
   "name": "pinecone",
+  "jest": {
+    "verbose": true
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,6 +18,7 @@
     "@reduxjs/toolkit": "^1.6.1",
     "aws-amplify": "^4.2.3",
     "axios": "^0.21.1",
+    "dayjs": "^1.10.7",
     "dotenv-webpack": "^7.0.2",
     "i18next": "^21.1.1",
     "immer": "^9.0.5",
@@ -58,6 +62,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-testing-library": "^4.6.0",
     "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.2.4",
     "jest-watch-typeahead": "^0.6.4",
     "redux-devtools-extension": "^2.13.8",
     "stylelint": "^13.13.1",
