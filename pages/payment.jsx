@@ -9,7 +9,7 @@ export async function getStaticProps({ locale }) {
     }, // will be passed to the page component as props
   };
 }
-export default function Payment(props) {
+export default function Payment() {
   const { t } = useTranslation();
 
   return (<div>
