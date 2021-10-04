@@ -1,10 +1,10 @@
 export class SessionstorageHelper {
-  static has = (key) => {
+  static has(key) {
     const val = SessionstorageHelper.get(key);
     return val !== null && val !== '';
-  };
+  }
 
-  static get = (key) => {
+  static get(key) {
     const val = sessionStorage.getItem(key);
     if (!val) {
       return null;
@@ -15,9 +15,9 @@ export class SessionstorageHelper {
     } catch (e) {
       return null;
     }
-  };
+  }
 
-  static getValid = (key, re) => {
+  static getValid(key, re) {
     const val = SessionstorageHelper.get(key);
     if (!val || typeof val !== 'string') {
       return null;
@@ -26,9 +26,13 @@ export class SessionstorageHelper {
       return val;
     }
     return null;
-  };
+  }
 
-  static set = (key, value) => sessionStorage.setItem(key, JSON.stringify(value));
+  static set(key, value) {
+    sessionStorage.setItem(key, JSON.stringify(value));
+  }
 
-  static remove = (key) => sessionStorage.removeItem(key);
+  static remove(key) {
+    sessionStorage.removeItem(key);
+  }
 }

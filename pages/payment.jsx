@@ -12,7 +12,5 @@ export async function getStaticProps({ locale }) {
 export default function Payment() {
   const { t } = useTranslation();
 
-  return (<div>
-          {t('payment:payment_title')}
-        </div>);
+  return <div>{t('payment:payment_title')}</div>;
 }

@@ -1,10 +1,10 @@
 export class LocalstorageHelper {
-  static has = (key) => {
+  static has(key) {
     const val = LocalstorageHelper.get(key);
     return val !== null && val !== '';
-  };
+  }
 
-  static get = (key) => {
+  static get(key) {
     const val = localStorage.getItem(key);
     if (!val) {
       return null;
@@ -15,9 +15,9 @@ export class LocalstorageHelper {
     } catch (e) {
       return null;
     }
-  };
+  }
 
-  static getValid = (key, re) => {
+  static getValid(key, re) {
     const val = LocalstorageHelper.get(key);
     if (!val || typeof val !== 'string') {
       return null;
@@ -26,9 +26,13 @@ export class LocalstorageHelper {
       return val;
     }
     return null;
-  };
+  }
 
-  static set = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+  static set(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
 
-  static remove = (key) => localStorage.removeItem(key);
+  static remove(key) {
+    localStorage.removeItem(key);
+  }
 }

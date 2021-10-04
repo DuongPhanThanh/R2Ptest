@@ -1,7 +1,7 @@
-
 ## Getting Started
 
 ## Prerequisites
+
 Install i18nexus-cli for ensuring localization always be up-to-date
 
 ```bash

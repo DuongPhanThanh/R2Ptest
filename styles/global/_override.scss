@@ -4,7 +4,9 @@
 
 /* ---------------------------------- Form ---------------------------------- */
 
-.new-control.new-checkbox.checkbox-success > input:checked ~ span.new-control-indicator {
+.new-control.new-checkbox.checkbox-success
+  > input:checked
+  ~ span.new-control-indicator {
   background: $colorSuccess;
   border-radius: unset;
 }
@@ -30,8 +32,8 @@ a {
     max-width: 1920px;
   }
 
-  border-bottom: .5px solid #cccccc;
-  box-shadow: rgba(0, 0, 0, .24) 0 1px 4px;
+  border-bottom: 0.5px solid #cccccc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 1px 4px;
 }
 
 .navbar a.navbar-brand img {
