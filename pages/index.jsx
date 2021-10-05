@@ -3,12 +3,14 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import nextI18nextConfig from '../next-i18next.config';
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
+      ...(await serverSideTranslations(locale, ['home'], nextI18nextConfig)),
       locale,
-      ...(await serverSideTranslations(locale, ['home'])),
-    }, // will be passed to the page component as props
+    },
   };
 }
 export default function Home({ locale }) {
