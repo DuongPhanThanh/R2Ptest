@@ -1,19 +1,20 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { getLocaleProp } from '@utils/getLocale';
+import { getLocaleDate } from '@utils/getLocaleDate';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import nextI18nextConfig from '../next-i18next.config';
+export const getStaticProps = ({ locale }) =>
+  getLocaleProp(locale, ['payment', 'common']);
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['payment'], nextI18nextConfig)),
-      locale,
-    },
-  };
-}
-export default function Payment() {
+export default function Payment({ locale }) {
   const { t } = useTranslation();
-
-  return <div>{t('payment:payment_title')}</div>;
+  return (
+    <div>
+      {t('payment:payment_title')}
+      <br />
+      {t('common:currency', { value: 1000 })}
+      <br />
+      {getLocaleDate(locale, new Date())}
+    </div>
+  );
 }

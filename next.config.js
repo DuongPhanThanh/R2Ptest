@@ -32,7 +32,7 @@ module.exports = {
           },
           {
             key: 'Content-Security-Policy',
-            value: `default-src 'self'`,
+            value: `default-src 'self'; style-src https://fonts.googleapis.com; style-src-elem https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com/ https://fonts.googleapis.com;`,
           },
           {
             key: 'X-Content-Type-Options',

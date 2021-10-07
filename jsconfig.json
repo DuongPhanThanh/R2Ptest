@@ -17,7 +17,8 @@
       "@components/*": ["src/components/*"],
       "@helpers/*": ["src/helpers/*"],
       "@styles/*": ["styles/*"],
-      "@store/*": ["src/store/*"]
+      "@store/*": ["src/store/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["**/*.js", "**/*.jsx", "next.config.js", "next-env.d.ts"],
