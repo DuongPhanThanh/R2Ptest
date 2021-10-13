@@ -1,13 +1,13 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 
-import Home from '../../pages/index';
+import Payment from '../../pages/payment';
 
 describe('Home page', () => {
-  it('display the home page with payment button', () => {
-    const screen = render(<Home locale="en" />);
+  it('display the payment page with plural', () => {
+    render(<Payment locale="en-GB" />);
 
-    const text = screen.getByText('home:title_welcome');
+    const text = screen.getByText('icu:person');
     expect(text).toBeInTheDocument();
   });
 });

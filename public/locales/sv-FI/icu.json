@@ -1,0 +1,3 @@
+{
+  "person": "{numPersons, plural, =0 {inga personer} =1 {en person} other {# person}}"
+}
