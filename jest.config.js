@@ -26,6 +26,7 @@ module.exports = {
     '@helpers/(.*)': '<rootDir>/src/helpers/$1',
     '@store/(.*)': '<rootDir>/src/store/$1',
     '@utils/(.*)': '<rootDir>/src/utils/$1',
+    'public/(.*)': '<rootDir>/public/$1',
     'src/(.*)': '<rootDir>/src/$1',
     '__tests__/(.*)': '<rootDir>/__tests__/$1',
   },

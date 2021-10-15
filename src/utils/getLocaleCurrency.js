@@ -5,12 +5,14 @@ import 'globalize/dist/globalize/currency';
 
 const enGBCldrNumbersData = require('cldr-data/main/en-GB/numbers.json');
 const svCldrNumbersData = require('cldr-data/main/sv/numbers.json');
+const svSECldrNumbersData = require('public/cldr/sv-SE/numbers.json');
 const svAXCldrNumbersData = require('cldr-data/main/sv-AX/numbers.json');
 const svFICldrNumbersData = require('cldr-data/main/sv-FI/numbers.json');
 const fiCldrNumbersData = require('cldr-data/main/fi/numbers.json');
 
 const enGBCurrencies = require('cldr-data/main/en-GB/currencies.json');
 const svCurrencies = require('cldr-data/main/sv/currencies.json');
+const svSECurrencies = require('public/cldr/sv-SE/numbers.json');
 const svAXCurrencies = require('cldr-data/main/sv-AX/currencies.json');
 const svFICurrencies = require('cldr-data/main/sv-FI/currencies.json');
 const fiCurrencies = require('cldr-data/main/fi/currencies.json');
@@ -32,6 +34,8 @@ Globalize.load(
   enGBCldrNumbersData,
   svFICldrNumbersData,
   fiCldrNumbersData,
+  svSECldrNumbersData,
+  svSECurrencies,
   svCldrNumbersData.main,
   svCurrencies,
   enGBCurrencies,
@@ -49,12 +53,7 @@ Globalize.load(
  */
 
 export const getLocaleCurrency = (value, locale = 'en-GB', style, currency) => {
-  if (locale === 'sv-SE') {
-    console.log(locale);
-    Globalize.locale('sv');
-  } else {
-    Globalize.locale(locale);
-  }
+  Globalize.locale(locale);
   const formatter = Globalize.currencyFormatter(currency, { style });
   const formattedValue = formatter(value);
   return formattedValue;

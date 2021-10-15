@@ -3,9 +3,14 @@ import { getLocaleCurrency } from '@utils/getLocaleCurrency';
 import { getLocaleDate } from '@utils/getLocaleDate';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { CURRENCY_CODE_EUR,CURRENCY_STYLE_ACCOUNTING, CURRENCY_STYLE_CODE, CURRENCY_STYLE_NAME } from 'src/constants';
+import {
+  CURRENCY_CODE_EUR,
+  CURRENCY_STYLE_ACCOUNTING,
+  CURRENCY_STYLE_CODE,
+  CURRENCY_STYLE_NAME,
+} from 'src/constants';
 
-export const getStaticProps = ({ locale }) =>
+export const getStaticProps = async ({ locale }) =>
   getLocaleProp(locale, ['payment', 'common', 'plural']);
 
 export default function Payment({ locale }) {
