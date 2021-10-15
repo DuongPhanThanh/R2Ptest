@@ -1,5 +1,6 @@
 import '../styles/global/_globals.scss';
 import 'bootstrap/dist/css/bootstrap.css';
+import '@utils/globalize';
 
 import { store } from '@store/index';
 import ICU from 'i18next-icu';
