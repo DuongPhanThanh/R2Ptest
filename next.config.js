@@ -4,6 +4,15 @@ const path = require('path');
 const { i18n } = require('./next-i18next.config');
 
 module.exports = {
+  webpack5: false,
+  webpack(config) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'cldr$': 'cldrjs',
+      'cldr': 'cldrjs/dist/cldr'
+    };
+    return config;
+  },
   reactStrictMode: true,
   i18n,
   sassOptions: {
@@ -32,7 +41,7 @@ module.exports = {
           },
           {
             key: 'Content-Security-Policy',
-            value: `default-src 'self'; style-src https://fonts.googleapis.com; style-src-elem https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com/ https://fonts.googleapis.com;`,
+            value: `default-src 'self' 'unsafe-eval'; style-src https://fonts.googleapis.com; style-src-elem https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com/ https://fonts.googleapis.com;`,
           },
           {
             key: 'X-Content-Type-Options',

@@ -1,7 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import userReducer from './user/slice';
+import localeReducer from './locale/slice';
 
 export const rootReducer = combineReducers({
-  userReducer,
+  localeReducer,
 });

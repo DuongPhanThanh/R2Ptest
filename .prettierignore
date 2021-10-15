@@ -1,6 +1,6 @@
 package-lock.json
 yarn.lock
-
+coverage
 node_modules/
 /.next
 /build

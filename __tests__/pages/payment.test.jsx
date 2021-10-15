@@ -7,7 +7,7 @@ describe('Home page', () => {
   it('display the payment page with plural', () => {
     render(<Payment locale="en-GB" />);
 
-    const text = screen.getByText('icu:person');
+    const text = screen.getByText('plural:person');
     expect(text).toBeInTheDocument();
   });
 });

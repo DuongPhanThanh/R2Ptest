@@ -1,3 +1,0 @@
-{
-  "person": "{numPersons, plural, =0 {no persons} =1 {one person} other {# persons}}"
-}
